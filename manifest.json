@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "消除无用信息",
+    "version": "1.0",
+    "description": "描述",
+    "icons": {},
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.baidu.com/*"
+            ],
+            "js": [
+                "./src/document_start.js"
+            ],
+            "runat": "document_start"
+        },
+        {
+            "matches": [
+                "https://www.baidu.com/*"
+            ],
+            "js": [
+                "./src/document_end.js"
+            ],
+            "runat": "document_end"
+        },
+        {
+            "matches": [
+                "https://www.baidu.com/*"
+            ],
+            "js": [
+                "./src/document_idle.js"
+            ],
+            "runat": "document_idle"
+        }
+    ]
+}
